@@ -27,13 +27,15 @@ import { useEffect, useMemo, useState, type FormEvent } from 'react'
 import ResearchWorkspace from './ResearchWorkspace'
 import ReportsWorkspace from './ReportsWorkspace'
 
-const API_URL = 'http://localhost:5000/api/students'
-const COURSES_API = 'http://localhost:5000/api/academics/courses'
-const SUBJECTS_API = 'http://localhost:5000/api/academics/subjects'
-const ATTENDANCE_API = 'http://localhost:5000/api/attendance'
-const FACULTY_API = 'http://localhost:5000/api/faculty'
-const TIMETABLE_API = 'http://localhost:5000/api/timetable'
-const PAYROLL_API = 'http://localhost:5000/api/payroll'
+const API_BASE = `${import.meta.env.VITE_API_URL}/api`
+
+const API_URL = `${API_BASE}/students`
+const COURSES_API = `${API_BASE}/academics/courses`
+const SUBJECTS_API = `${API_BASE}/academics/subjects`
+const ATTENDANCE_API = `${API_BASE}/attendance`
+const FACULTY_API = `${API_BASE}/faculty`
+const TIMETABLE_API = `${API_BASE}/timetable`
+const PAYROLL_API = `${API_BASE}/payroll`
 
 function getLocalDate() {
   const now = new Date()

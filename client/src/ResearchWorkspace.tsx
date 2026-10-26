@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from 'react'
 import { BookOpen, Plus, Search, Pencil, Trash2, RefreshCw, X, CheckCircle2, FileText } from 'lucide-react'
 
-const API = 'http://localhost:5000/api/research'
+const API = `${import.meta.env.VITE_API_URL}/api/research`
 type PublicationStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Published' | 'Rejected'
 interface Publication {
   id: number; title: string; authors: string; department: string; publication_type: string;
