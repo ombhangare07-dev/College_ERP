@@ -27,8 +27,7 @@ import { useEffect, useMemo, useState, type FormEvent } from 'react'
 import ResearchWorkspace from './ResearchWorkspace'
 import ReportsWorkspace from './ReportsWorkspace'
 
-const API_BASE = `${import.meta.env.VITE_API_URL}/api`
-
+const API_BASE = `${import.meta.env.VITE_API_URL.replace(/\/+$/, '')}/api`
 const API_URL = `${API_BASE}/students`
 const COURSES_API = `${API_BASE}/academics/courses`
 const SUBJECTS_API = `${API_BASE}/academics/subjects`
